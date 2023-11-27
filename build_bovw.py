@@ -12,7 +12,7 @@ n_clusters = 5000  # 字典大小
 patch_size = 32  # 图像块大小
 step_size = 8  # 提取步长
 image_size = (128, 128)  # 图像大小
-sampling_fraction = 0.1  # 采样比例，这里是10%
+sampling_fraction = 0.1  # 采样比例
 
 # SIFT特征提取函数
 def extract_sift_features(image):
@@ -24,7 +24,7 @@ def extract_sift_features(image):
 
 # 从Caltech数据集中提取特征
 all_features = []
-base_path = "data/train"  # 假设数据集存放在这个目录下
+base_path = "data/train"  
 
 for folder in os.listdir(base_path):
     folder_path = os.path.join(base_path, folder)
